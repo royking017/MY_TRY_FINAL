@@ -29,7 +29,6 @@ public class PANDC {
                    Thread.yield();
                }
             }
-
         }
     }
 
@@ -47,10 +46,20 @@ public class PANDC {
                if (i % 2 == 0){
                    msg.setName("第"+i + "个：" + "111");
                    msg.setContent("第"+i + "个：" +"i am first one");
+                   try {
+                       Thread.sleep(100);
+                   } catch (InterruptedException e) {
+                       e.printStackTrace();
+                   }
                    Thread.yield();
                }else{
                    msg.setName("第"+i + "个：" +"222");
                    msg.setContent("第"+i + "个：" +"i am second one");
+                   try {
+                       Thread.sleep(100);
+                   } catch (InterruptedException e) {
+                       e.printStackTrace();
+                   }
                    Thread.yield();
                }
            }
